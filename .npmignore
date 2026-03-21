@@ -1,0 +1,4 @@
+src/
+tsconfig.json
+.mcpregistry_*
+*.ts.map

@@ -1,6 +1,6 @@
 {
 	"name": "@the402/mcp-server",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"description": "MCP server for the402.ai — AI agent service marketplace. Browse services, purchase, manage threads, list services as a provider, and more.",
 	"type": "module",
 	"main": "dist/index.js",
@@ -26,6 +26,7 @@
 		"type": "git",
 		"url": "https://github.com/the402ai/mcp-server.git"
 	},
+	"mcpName": "io.github.the402ai/mcp-server",
 	"homepage": "https://the402.ai",
 	"license": "MIT",
 	"dependencies": {
