@@ -1,0 +1,26 @@
+# Smithery configuration for @the402/mcp-server
+# https://smithery.ai/docs/build/project-config/smithery-yaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      apiKey:
+        type: string
+        title: API Key
+        description: "the402.ai API key for authenticated operations (optional — catalog browsing works without it)"
+      apiBase:
+        type: string
+        title: API Base URL
+        description: "API base URL"
+        default: "https://api.the402.ai"
+  commandFunction: |-
+    (config) => ({
+      command: "npx",
+      args: ["-y", "@the402/mcp-server"],
+      env: {
+        ...(config.apiKey ? { THE402_API_KEY: config.apiKey } : {}),
+        ...(config.apiBase ? { THE402_API_BASE: config.apiBase } : {})
+      }
+    })

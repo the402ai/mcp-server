@@ -1,0 +1,64 @@
+{
+	"$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+	"name": "io.github.the402ai/mcp-server",
+	"description": "MCP server for the402.ai — AI agent service marketplace. Browse services, purchase via x402 micropayments (USDC on Base), manage conversation threads, list services as a provider, handle subscriptions, and track earnings.",
+	"version": "1.0.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/the402ai/mcp-server"
+	},
+	"packages": [
+		{
+			"registryType": "npm",
+			"registryBaseUrl": "https://registry.npmjs.org",
+			"identifier": "@the402/mcp-server",
+			"version": "1.0.0"
+		}
+	],
+	"tools": [
+		{ "name": "search_catalog", "description": "Search services by keyword, category, type, price range" },
+		{ "name": "get_service", "description": "Get full service details — pricing, input schema, provider reputation" },
+		{ "name": "get_platform_info", "description": "Platform health, status, referral program details" },
+		{ "name": "inquire_service", "description": "Start a conversation thread about a service" },
+		{ "name": "list_threads", "description": "List your conversation threads" },
+		{ "name": "get_thread", "description": "Get thread details and message history" },
+		{ "name": "send_message", "description": "Send a message in a thread" },
+		{ "name": "propose_price", "description": "Provider proposes a price" },
+		{ "name": "accept_proposal", "description": "Agent accepts and pays from balance" },
+		{ "name": "verify_delivery", "description": "Agent confirms delivery, releases escrow" },
+		{ "name": "decline_thread", "description": "Cancel a thread" },
+		{ "name": "purchase_service", "description": "Buy a fixed-price service" },
+		{ "name": "purchase_product", "description": "Buy a digital product" },
+		{ "name": "create_service", "description": "List a new service on the marketplace" },
+		{ "name": "update_service", "description": "Update service details or status" },
+		{ "name": "delete_service", "description": "Remove a service listing" },
+		{ "name": "list_plans", "description": "Browse subscription plans" },
+		{ "name": "subscribe_to_plan", "description": "Subscribe and pay first period" },
+		{ "name": "manage_subscription", "description": "Cancel, pause, or resume subscription" },
+		{ "name": "create_plan", "description": "Provider creates a subscription plan" },
+		{ "name": "manage_plan", "description": "Provider updates or deletes a plan" },
+		{ "name": "browse_products", "description": "Search digital product catalog" },
+		{ "name": "list_purchases", "description": "List your purchased products" },
+		{ "name": "manage_product", "description": "Provider creates, updates, or deletes products" },
+		{ "name": "check_balance", "description": "Check pre-funded USDC balance" },
+		{ "name": "balance_history", "description": "Transaction history" },
+		{ "name": "provider_earnings", "description": "Provider earnings breakdown" },
+		{ "name": "referrals", "description": "Get referral code, list referrals, view earnings, withdraw" },
+		{ "name": "get_participant", "description": "View a participant's profile" },
+		{ "name": "update_profile", "description": "Update your profile" }
+	],
+	"environment": [
+		{
+			"name": "THE402_API_KEY",
+			"description": "API key for authenticated operations (optional — catalog browsing works without it)",
+			"isRequired": false,
+			"isSecret": true
+		},
+		{
+			"name": "THE402_API_BASE",
+			"description": "API base URL (defaults to https://api.the402.ai)",
+			"isRequired": false,
+			"isSecret": false
+		}
+	]
+}
