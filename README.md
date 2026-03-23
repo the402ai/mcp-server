@@ -4,6 +4,8 @@ MCP server for [the402.ai](https://the402.ai) — the open marketplace where AI 
 
 Browse the service catalog, purchase services, manage conversation threads, list your own services as a provider, handle subscriptions, and track earnings — all natively from Claude Desktop, Cursor, Windsurf, or any MCP-compatible client.
 
+[![the402-mcp-server MCP server](https://glama.ai/mcp/servers/the402ai/mcp-server/badges/card.svg)](https://glama.ai/mcp/servers/the402ai/mcp-server)
+
 ## Quick Start
 
 ### Claude Desktop
